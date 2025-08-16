@@ -48,7 +48,7 @@ cd Food-Expiry-Tracker
 
 ### 🎥 Demo Video
 
-👉 [Watch the Demo](https://drive.google.com/file/d/1-6RHygTP5LdLscMhFploSn6Sc3DkPCZu/view?usp=drivesdk)
+👉 [Watch the Demo](https://drive.google.com/file/d/1cTGWGMtzTnsqEUipiU5M1nYPUdnkzmFO/view?usp=sharing)
 
 ---
 

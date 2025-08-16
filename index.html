@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Expiry Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>🍲 Food Expiry Tracker</h2>
+
+  <!-- Input form -->
+  <div>
+    <input type="text" id="foodName" placeholder="Food name">
+
+    <label for="expiryDate">Expiry Date:</label>
+    <input type="date" id="expiryDate" title="Select the expiry date of the food">
+    <button id="addBtn">Add</button>
+
+    
+  </div>
+
+  <!-- Main Food List -->
+  <h3>My Food Items</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Expiry Date</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="foodList"></tbody>
+  </table>
+
+  <!-- Donation List -->
+  <h3>👐 Items to Donate</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Expiry Date</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="donationList"></tbody>
+  </table>
+
+  <!-- Used Items List -->
+  <h3>✅ Used Items</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Expiry Date</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="usedList"></tbody>
+  </table>
+
+ <!-- Nearby donation centers section -->
+<div style="margin-top: 10px; text-align: center;">
+  <button onclick="findNearbyCenters()">📍 Find Nearby Donation Centers</button>
+  <ul id="nearbyCenters" style="margin-top:10px; list-style:none; padding:0;"></ul>
+</div>
+
+<script src="app.js"></script>
+
+
+
+</body>
+</html>

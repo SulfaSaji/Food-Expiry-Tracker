@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nearby Donation Centers</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <h2>📍 Nearby Donation Centers</h2>
+  <div id="map" style="height: 500px; width: 100%;"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    function initMap() {
+      const map = L.map('map').setView([20.5937, 78.9629], 5);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      // show user location
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(pos => {
+          const lat = pos.coords.latitude;
+          const lon = pos.coords.longitude;
+          map.setView([lat, lon], 12);
+          L.marker([lat, lon]).addTo(map).bindPopup("You are here").openPopup();
+        });
+      }
+
+      // demo orphanages / old age homes
+      const donationCenters = [
+        { name: "Sunrise Orphanage", lat: 12.9716, lon: 77.5946 }, // Bangalore
+        { name: "Hope Old Age Home", lat: 19.0760, lon: 72.8777 }, // Mumbai
+        { name: "Care Shelter NGO", lat: 28.6139, lon: 77.2090 }   // Delhi
+      ];
+
+      donationCenters.forEach(center => {
+        L.marker([center.lat, center.lon])
+          .addTo(map)
+          .bindPopup(center.name);
+      });
+    }
+
+    initMap();
+  </script>
+</body>
+</html>

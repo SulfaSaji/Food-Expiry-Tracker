@@ -1,0 +1,88 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+h2 {
+  text-align: center;
+  
+  font-size: 2.5em; 
+  font-weight: bold; 
+  background-color: rgba(240, 240, 240, 0.85);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  background-color: rgba(240, 240, 240, 0.85);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Row colors */
+.fresh { background-color: #d4edda; }
+.warning { background-color: #fff3cd; }
+.expired { background-color: #f8d7da; }
+
+button {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+
+div {
+  background-color: rgba(240, 240, 240, 0.85);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+#foodName {
+  width: 200px;
+  height: 30px;
+}
+#expiryDate {
+  width: 200px; 
+  height: 30px;
+}
+#addBtn {
+height:30px;
+}
+

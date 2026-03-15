@@ -62,9 +62,3 @@ Some planned improvements to make the app more powerful and practical:
 * **Mobile App Version** → Android/iOS app for on-the-go tracking.
 * **AI Suggestions** → Recipe recommendations using items that are about to expire.
 
----
-
-### 👥 Team Members
-
-* **Sulfa Saji**
-
